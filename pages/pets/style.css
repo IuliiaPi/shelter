@@ -1,0 +1,371 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #545454;
+    --white-color: #FFFFFF;
+    --bg-main-color: #F6F6F6;
+    --bg-white-color: #FFFFFF;
+    --card-background-color: #FAFAFA;
+}
+
+html,
+.page {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+
+    color: var(--main-color);
+    background-color: var(--bg-main-color);
+}
+
+.page__inner {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.page._lock {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1240px;
+    /* 1200px + 20px + 20px */
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.link {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.link:hover,
+.link:focus {
+    opacity: .75;
+}
+
+/*  -------------------------  Header styles start -------------------------------  */
+
+.header {
+    background: #FFFFFF;
+}
+
+.header__content {
+    padding: 30px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo__link {
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+.logo__subtitle {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+
+    color: #292929;
+}
+
+.menu__icon {
+    display: none;
+}
+
+.menu__list {
+    padding: 16px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+}
+
+.menu__link {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+
+    color: #545454;
+}
+
+.menu__link:hover {
+    color: #292929;
+    opacity: 1;
+}
+
+.menu__link_active,
+.menu__link:active {
+    color: #545454;
+    border-bottom: 3px solid #F1CDB3;
+}
+
+.menu__link_active:hover {
+    color: #545454;
+    cursor: default;
+}
+
+/*  -----------------  Header styles end  --------------------- */
+
+/* Main styles start */
+
+.main {
+    background: #F6F6F6;
+}
+
+.main__content {
+    padding: 80px 0 99px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 60px;
+}
+
+.title {
+    font-size: 35px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    row-gap: 30px;
+    column-gap: 40px;
+}
+
+.card {
+    width: 270px;
+    height: 435px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+     background: var(--card-background-color);
+    border-radius: 9px;
+
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    background: var(--bg-white-color);
+    /* background-color: darken(var(--card-background-color), 15%); */
+}
+
+.card:hover .btn_learn-more {
+    background-color: #F1CDB3;
+    transition: all 0.6s ease;
+}
+
+.card__img {
+    border-radius: 9px 9px 0px 0px;
+}
+
+.card__title {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+.btn_learn-more {
+    padding: 12.5px 43px;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background-color: transparent;
+}
+
+.btn_learn-more .text {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+
+    color: #292929;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.btn-paginator {
+    width: 52px;
+    height: 52px;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+
+    font-size: 20px;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #292929;
+    background-color: transparent;
+}
+
+.btn-paginator:hover {
+    border: 2px solid #FDDCC4;
+    background: #FDDCC4;
+}
+
+.btn-paginator_inactive,
+.btn-paginator_inactive:hover{
+    border: 2px solid #CDCDCD;
+    color: #CDCDCD;
+    background-color: transparent;
+    cursor: no-drop;
+}
+
+.btn-paginator_active {
+    background: #F1CDB3;
+}
+
+/* Main styles end */
+
+/* Footer styles start */
+
+.footer {
+    background-color: #211F20;
+    background-image: url(../../assets/images/footer-gradient-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url(../assets/images/start-screen-background.jpg) no-repeat center; */
+}
+
+.footer__content {
+    padding: 40px 0px 0px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__contacts,
+.footer__locations {
+    padding: 16px 0px 60px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footer__contacts {
+    max-width: 288px;
+    gap: 40px;
+}
+
+.footer__locations {
+    width: 312px;
+    gap: 34px;
+}
+
+.footer__contacts .title,
+.footer__locations .title {
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: left;
+
+    color: var(--white-color);
+}
+
+.link_mail,
+.link_phone,
+.link_Boston,
+.link_London {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+/* Footer styles end */

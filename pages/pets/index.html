@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,201 @@
     <meta name="keywords" content="Shelter, pets, Iuliia Pidlisna">
     <meta name="author" content="Iuliia Pidlisna">
 
-    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
 
     <link rel="stylesheet" href="style.css">
 
     <title> Shelter </title>
 </head>
-<body>
-    
+
+<body class="page">
+    <div class="page__inner">
+
+        <!-- header -->
+
+        <header class="header page__header">
+            <div class="container">
+                <div class="header__content">
+
+                    <div class="header__logo logo">
+                        <h1 class="logo__title"> <a href="../main/index.html" class="logo__link link"> Cozy House </a> </h1>
+                        <p class="logo__subtitle">Shelter for pets in Boston</p>
+                    </div>
+
+                    <!-- menu  -->
+
+                    <div class="header__menu menu">
+                        <div class="menu__icon"><span></span>
+                        </div>
+
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="../main/index.html" class="menu__link link">About the
+                                        shelter</a>
+                                </li>
+                                <li class="menu__item"><a href="#pets" class="menu__link menu__link_active">Our
+                                        pets</a>
+                                </li>
+                                <li class="menu__item"><a href="../main/index.html#help" class="menu__link link">Help the shelter</a>
+                                </li>
+                                <li class="menu__item"><a href="#footer" class="menu__link link">Contacts</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!--Main Area-->
+
+        <main class="main" id="pets">
+            <div class="container">
+                <div class="main__content">
+
+                    <h3 class="title"> Our friends who <br> are looking for a house </h3>
+
+                    <!-- cards container -->
+
+                    <div class="cards-container">
+
+                        <div class="card" id="pets_Katrine">
+                            <img class="card__img" id="pets-Katrine" src="../../assets/images/pets-katrine.jpg"
+                                alt="pets-Katrine" width="270" height="270">
+                            <h4 class="card__title" id="katrine"> Katrine </h4>
+                            <button type="button" class="btn btn_learn-more"> <a href="../pets/index.html" class="text">
+                                    Learn more </a> </button>
+                        </div>
+
+                        <div class="card" id="pets_Jennifer">
+                            <img class="card__img" id="pets-Jennifer" src="../../assets/images/pets-jennifer.jpg"
+                                alt="pets-Jennifer" width="270" height="270">
+                            <h4 class="card__title" id="Jennifer"> Jennifer </h4>
+                            <button type="button" class="btn btn_learn-more"> <a href="../pets/index.html" class="text">
+                                    Learn more </a> </button>
+                        </div>
+
+                        <div class="card" id="pets_Woody">
+                            <img class="card__img" id="pets-Woody" src="../../assets/images/pets-woody.jpg"
+                                alt="pets-Woody" width="270" height="270">
+                            <h4 class="card__title" id="Woody"> Woody </h4>
+                            <button type="button" class="btn btn_learn-more"> <a href="../pets/index.html" class="text">
+                                    Learn more </a> </button>
+                        </div>
+
+
+
+                        <div class="card" id="pets_Sophia">
+                            <img class="card__img" id="pets-Sophia" src="../../assets/images/pets-sophia.jpg"
+                                alt="pets-Sophia" width="270" height="270">
+                            <h4 class="card__title" id="Sophia"> Sophia </h4>
+                            <button type="button" class="btn btn_learn-more"> <a href="../pets/index.html" class="text">
+                                    Learn more </a> </button>
+                        </div>
+
+                        <div class="card" id="pets_Timmy">
+                            <img class="card__img" id="pets-Timmy" src="../../assets/images/pets-timmy.jpg"
+                                alt="pets-Timmy" width="270" height="270">
+                            <h4 class="card__title" id="Timmy"> Timmy </h4>
+                            <button type="button" class="btn btn_learn-more"> <a href="../pets/index.html" class="text">
+                                    Learn more </a> </button>
+                        </div>
+
+                        <div class="card" id="pets_Charly">
+                            <img class="card__img" id="pets-Charly" src="../../assets/images/pets-charly.jpg"
+                                alt="pets-Charly" width="270" height="270">
+                            <h4 class="card__title" id="Charly"> Charly </h4>
+                            <button type="button" class="btn btn_learn-more"> <a href="../pets/index.html" class="text">
+                                    Learn more </a> </button>
+                        </div>
+
+
+
+                        <div class="card" id="pets_Scarlett">
+                            <img class="card__img" src="../../assets/images/pets-scarlett.jpg" alt="pets-Scarlett"
+                                width="270" height="270">
+                            <h4 class="card__title" id="Scarlett"> Scarlett </h4>
+                            <button type="button" class="btn btn_learn-more"> <a href="../pets/index.html" class="text">
+                                    Learn more </a> </button>
+                        </div>
+
+                        <div class="card" id="pets_Freddie">
+                            <img class="card__img" src="../../assets/images/pets-freddie.jpg" alt="pets-Freddie"
+                                width="270" height="270">
+                            <h4 class="card__title" id="Freddie"> Freddie </h4>
+                            <button type="button" class="btn btn_learn-more"> <a href="../pets/index.html" class="text">
+                                    Learn more </a> </button>
+                        </div>
+
+
+                    </div>
+
+                    <!--------------------- navigation ------------------->
+
+                    <nav class="navigation">
+
+                        <button disabled type="button" class="btn btn-paginator btn-paginator_inactive">
+                            <h4 class="text"> &lt;&lt; </h4>
+                        </button>
+
+                        <button disabled type="button" class="btn btn-paginator btn-paginator_inactive">
+                            <h4 class="text"> &lt; </h4>
+                        </button>
+
+                        <button type="button" class="btn btn-paginator btn-paginator_active" id="button_paginator_active_1">
+                            <h4 class="text" id="text_active"> 1 </h4>
+                        </button>
+
+                        <button type="button" class="btn btn-paginator">
+                            <h4 class="text" id="text_active"> &gt; </h4>
+                        </button>
+
+                        <button type="button" class="btn btn-paginator">
+                            <h4 class="text" id="text_active"> &gt;&gt; </h4>
+                        </button>
+
+                    </nav>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+
+        <footer id="footer" class="footer page__footer">
+            <div class="container">
+                <div class="footer__content">
+
+                    <div class="footer__contacts">
+                        <h3 class="title"> For questions and suggestions </h3>
+                        <a href="mailto:email@shelter.com" class="link link_mail"> <img
+                                src="../../assets/icons/icon-email.svg" alt="icon-email" width="40" height="32">
+                            email@shelter.com </a>
+                        <a href="tel:+136745677554" class="link link_phone"> <img
+                                src="../../assets/icons/icon-phone.svg" alt="icon-phone" width="40" height="32"> +13 674
+                            567 75 54 </a>
+
+                    </div>
+
+                    <div class="footer__locations">
+                        <h3 class="title"> We are waiting for your visit </h3>
+                        <a href="https://goo.gl/maps/DQAtMFkDQeXLq8EK6" target="_blank" class="link link_Boston"><img
+                                src="../../assets/icons/icon-marker.svg" alt="icon-marker" width="22" height="32">1
+                            Central Street, Boston (entrance from the store)</a>
+                        <a href="https://goo.gl/maps/Q6fPdSKZQiEJ7BoB6" target="_blank" class="link link_London"><img
+                                src="../../assets/icons/icon-marker.svg" alt="icon-marker" width="22" height="32">18
+                            South Park, London</a>
+                    </div>
+
+                    <div class="footer__img">
+                        <img src="../../assets/images/footer-puppy.png" alt="puppy" width="300" height="310">
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
 </body>
+
 </html>

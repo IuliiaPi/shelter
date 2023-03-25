@@ -417,10 +417,10 @@ html,
 
 .btn_learn-more {
     padding: 13px 43px;
-    background-color: transparent;
 
     border: 2px solid #F1CDB3;
     border-radius: 100px;
+    background-color: transparent;
 }
 
 .btn_learn-more .text {
