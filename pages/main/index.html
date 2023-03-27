@@ -79,7 +79,12 @@
                         </div>
 
                         <div class="start-screen__img">
-                            <img src="../../assets/images/start-screen-puppy.png" alt="puppy" width="698" height="728">
+                            <picture>
+                                <source srcset="../../assets/images/start-screen-puppy.png" type="image/png" media="(min-width:1200px)" width="698" height="728">
+                                <source srcset="../../assets/images/start-screen-puppy.png" type="image/png" media="(max-width:1200px)" width="569" height="593">
+                                <source srcset="../../assets/images/start-screen-puppy.png" type="image/png" media="(max-width:767px)" width="260" height="272">
+                                <img class="start-screen__img-puppy" src="../../assets/images/start-screen-puppy.png" alt="puppy" width="698" height="728">
+                            </picture>
                         </div>
 
                     </div>
@@ -99,7 +104,7 @@
                     <div class="section__content about__content">
 
                         <div class="about__img">
-                            <img class="about-pets" src="../../assets/images/about-pets.jpg" alt="about-pets"
+                            <img class="about__img-pets" src="../../assets/images/about-pets.jpg" alt="about-pets"
                                 width="300" height="408">
                         </div>
 
@@ -293,7 +298,7 @@
                     <div class="donation__content">
 
                         <div class="donation__img">
-                            <img src="../../assets/images/donation-dog.png" alt="donation-dog" width="505" height="261">
+                            <img src="../../assets/images/donation-dog.png" class="donation__img-dog" alt="donation-dog" width="505" height="261">
                         </div>
 
                         <div class="donation__text">
@@ -354,7 +359,7 @@
                     </div>
 
                     <div class="footer__img">
-                        <img src="../../assets/images/footer-puppy.png" alt="puppy" width="300" height="310">
+                        <img src="../../assets/images/footer-puppy.png" class="footer__img-puppy" alt="puppy" width="300" height="310">
                     </div>
 
                 </div>

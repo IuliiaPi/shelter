@@ -179,7 +179,7 @@ html,
 /*  -----------------  Header styles end  --------------------- */
 
 
-/*  -----------------  Start_screen-content  --------------------- */
+/*  -----------------  Блок Not only  --------------------- */
 
 .start-screen__content {
     display: flex;
@@ -652,17 +652,155 @@ html,
 /*  ===========================  Media styles start  =============================  */
 /*  ==============================================================================  */
 
+/* -----------  @media screen and (max-width: 768px)  -------------- */
 
-/* -------------------  @media (max-width: 768px)  ---------------------------- */
+@media screen and (max-width: 1200px) {
 
-@media (max-width: 768px) {}
+    /* @media screen and (max-width: 1279.98px)  */
 
+    .container {
+        max-width: 748px;
+        /* 708px + 20px + 20px */
+        margin: 0 auto;
+    }
+
+    .header__content {
+        margin-bottom: 60px;
+    }
+
+    /* Блок Not only */
+
+    .start-screen__content {
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .start-screen__text {
+        padding-top: 0px;
+    }
+
+    .btn_make-a-friend {
+        margin-left: 126.5px;
+    }
+
+    .start-screen__img-puppy {
+        /* width: 569px;
+        height: 593px; */
+        margin-left: 142px;
+    }
+
+    /* About-content */
+
+    .about__content {
+        flex-direction: column-reverse;
+        gap: 80px;
+    }
+
+    /* Pets */
+
+    .pets__slider {
+        max-width: 708px;
+    }
+
+    .carousel-wrapper {
+        width: 580px;
+        /*  270*2 + 40*1 = 540+40 */
+        margin: 0 12px;
+        overflow: hidden;
+    }
+
+    .carousel {
+        position: relative;
+        left: -580px;
+    }
+
+    @keyframes move-right {
+        from {
+            left: -580px;
+        }
+
+        to {
+            left: -1160px;
+        }
+    }
+
+    @keyframes move-left {
+        from {
+            left: -580px;
+        }
+
+        to {
+            left: 0px;
+        }
+    }
+
+    .item {
+        gap: 0px;
+        /* gap: 40px; */
+    }
+
+    .card {
+        margin-right: 30px;
+    }
+
+    /* Help */
+
+    .help__list {
+        max-width: 630px;
+        column-gap: 62px;
+        justify-content: space-around;
+    }
+
+    /* Donation */
+
+    .donation__content {
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 60px;
+    }
+
+    /* popup */
+
+    /* .popup {
+        width: 630px;
+        height: 350px;
+      } */
+
+    /* Footer */
+
+    .footer__content {
+        padding: 30px 0px 0px;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .footer__contacts,
+    .footer__locations {
+        padding: 0px 0px 15px;
+    }
+
+}
 
 /* ============================================================================= */
-/* -------------------------  @media (max-width: 320px)  ----------------------- */
+/* -----------  @media screen and (max-width: 320px)  ---------------- */
 /* @media (max-width: 767px) */
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
+
+    .container {
+        max-width: 340px;
+        /* 300px + 20px + 20px */
+
+        margin: 0 auto;
+    }
+
+    .header_wrapper {
+        /* width: 257px;
+        padding: 0;
+        padding-top: 30px;
+        justify-content: space-between; */
+    }
 
     .menu__icon {
         width: 30px;
@@ -782,4 +920,245 @@ html,
         color: #CDCDCD;
     }
 
+    /* ---------------------------- */
+
+    /* Блок Not only */
+
+    .start-screen__content {
+        justify-content: center;
+       align-items: center;
+        /* text-align: center; */
+        gap: 110px;
+    }
+
+    .start-screen__text {
+        justify-content: center;
+       align-items: center; 
+    }
+
+    .start-screen__text .title {
+        max-width: 230px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .start-screen__text .subtitle {
+        text-align: center;
+        font-size: 14.46px;
+    }
+
+    .btn_make-a-friend {
+        margin-left: 0px;  
+    }
+
+    .start-screen__img-puppy {
+        width: 260px;
+        height: 271.77px;
+
+        margin-left: 0px;
+    }
+
+    /* About-content */
+
+    .about__content {
+        padding: 42px 0 42px;
+
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .about__text {
+        gap: 22px;
+    }
+
+    .about__text .title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .about__text .subtitle  {
+        padding: 0 5px;
+        text-align: justify;
+    }
+
+    .about__img-pets {
+        width: 260px;
+        height: 353.6px;
+    }
+
+    /* Pets */
+
+    .pets__content {
+        padding: 42px 0 42px;
+    }
+
+    .pets__title  {
+        font-size: 25px;
+    }
+
+    .pets__slider {
+        width: 270px;
+        margin-bottom: 42px;
+        justify-content: space-around;
+    }
+
+    .carousel-wrapper {
+        width: 270px;
+        /*  270*1 + 40*0 = 270 */
+        margin: 0 0px;
+        overflow: hidden;
+    }
+
+    .carousel {
+        position: relative;
+        left: -270px;
+    }
+
+    @keyframes move-right {
+        from {
+            left: -270px;
+        }
+
+        to {
+            left: -540px;
+        }
+    }
+
+    @keyframes move-left {
+        from {
+            left: -270px;
+        }
+
+        to {
+            left: 0px;
+        }
+    }
+
+    .item {
+        gap: 0px;
+    }
+
+    #btn-left {
+        order: 2;
+        margin-top: 20px;
+        /* margin-bottom: 42px; */
+    }
+
+    #carousel-wrapper {
+        order: 1;
+    }
+
+    #btn-right {
+        order: 3;
+        margin-top: 20px;
+    }
+
+    /* Help */
+
+    .help__content {
+        /* max-width: 270px; */
+        padding: 42px 0 12px;
+    }
+
+    .help__content .title {
+        max-width: 220px;
+        margin-bottom: 42px;
+        font-size: 25px;
+    }
+
+    .help__list {
+        /* row-gap: 10px; */
+        /* justify-content: space-between; */
+    }
+
+    .help__item {
+        /* width: 130px; */
+    }
+
+    .help__link {
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    /* Donation */
+
+    .donation__content {
+        padding: 42px 0;        
+        gap: 45px;
+    }
+
+    .donation__text {
+        gap: 23px;       
+        align-items: center;      
+    }
+
+    .donation__content .title {
+        max-width: 210px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .donation__content .subtitle {
+        text-align: center;
+        font-size: 13.6px;
+    }
+
+    .donation__credit-card {
+        font-size: 15px;
+    }
+
+    .donation__description {
+        text-align: justify;
+    }
+
+   .donation__img-dog {
+        width: 260px;
+        height: 135.2px;
+    }
+
+
+    /* popup */
+
+    /* .popup {
+  width: 80vw;
+    height: 50vh;
+    min-height: 340px;
+} */
+
+
+
+    /* Footer */
+
+    .footer__content {
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .footer__contacts,
+    .footer__locations {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__locations {
+        gap: 40px;
+    }
+
+    .footer__contacts .title,
+    .footer__locations .title {
+        font-size: 25px;
+    }
+
+    .link_Boston {
+        font-size: 18.8px;
+    }
+
+    .footer__img-puppy {
+        width: 260px;
+        height: 269px;
+    }
+
 }
+
+/* ----------------------  Media styles end -------------------------- */
