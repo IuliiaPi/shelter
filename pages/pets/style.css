@@ -249,12 +249,6 @@ html,
 .btn_learn-more {
     padding: 12.5px 43px;
 
-    border: 2px solid #F1CDB3;
-    border-radius: 100px;
-    background-color: transparent;
-}
-
-.btn_learn-more .text {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -263,6 +257,10 @@ html,
     letter-spacing: 0.06em;
 
     color: #292929;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background-color: transparent;
 }
 
 .navigation {
