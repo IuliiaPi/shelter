@@ -403,6 +403,8 @@ html,
     align-items: center;
     gap: 30px;
 
+    overflow: hidden;
+
     background: var(--card-background-color);
     border-radius: 9px;
 
@@ -412,16 +414,22 @@ html,
 
 .card:hover {
     background: var(--bg-white-color);
+    box-shadow: 0px 3px 5px 0px rgba(27, 26, 26, 0.5);
     /* background-color: darken(var(--card-background-color), 15%); */
+}
+
+.card__img {
+    border-radius: 9px 9px 0px 0px;
+    transition: all 0.6s ease;
+}
+
+.card:hover .card__img {
+    transform: scale(1.05);
 }
 
 .card:hover .btn_learn-more {
     background-color: #F1CDB3;
     transition: all 0.6s ease;
-}
-
-.card__img {
-    border-radius: 9px 9px 0px 0px;
 }
 
 .card__title {
@@ -444,6 +452,8 @@ html,
     border: 2px solid #F1CDB3;
     border-radius: 100px;
     background-color: transparent;
+
+    transition: all 0.6s ease;
 }
 
 .btn_learn-more:active { 
