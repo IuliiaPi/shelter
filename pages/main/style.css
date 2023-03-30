@@ -84,12 +84,16 @@ html,
 
 .link {
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .link:hover,
 .link:focus {
     opacity: .75;
+}
+
+.link:active {
+    opacity: 1;
 }
 
 /*  -------------------------  Header styles start -------------------------------  */
@@ -234,6 +238,11 @@ html,
     background: #FDDCC4;
 }
 
+.btn-link:active,
+.btn_make-a-friend:active {
+    background: #F1CDB3;
+}
+
 /*  ------------------------  About  ------------------------- */
 
 .section_about {
@@ -322,6 +331,11 @@ html,
 .btn_arrow:hover {
     background: #FDDCC4;
     border: 2px solid #FDDCC4;
+}
+
+.btn_arrow:active {
+    background: #F1CDB3;
+    border: 2px solid #F1CDB3;
 }
 
 .btn_arrow_inactive {
@@ -430,6 +444,10 @@ html,
     border: 2px solid #F1CDB3;
     border-radius: 100px;
     background-color: transparent;
+}
+
+.btn_learn-more:active { 
+    opacity: 0.8;
 }
 
 /* ----------------------  Pets styles end -------------------------- */
@@ -547,6 +565,10 @@ html,
     background: #FDDCC4;
 }
 
+.donation__credit-card:active{
+    background: #F1CDB3;
+}
+
 .donation__description {
     max-width: 380px;
 
@@ -654,7 +676,7 @@ html,
 
 /* -----------  @media screen and (max-width: 768px)  -------------- */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1220px) {
 
     /* @media screen and (max-width: 1279.98px)  */
 
@@ -926,14 +948,14 @@ html,
 
     .start-screen__content {
         justify-content: center;
-       align-items: center;
+        align-items: center;
         /* text-align: center; */
         gap: 110px;
     }
 
     .start-screen__text {
         justify-content: center;
-       align-items: center; 
+        align-items: center;
     }
 
     .start-screen__text .title {
@@ -948,7 +970,7 @@ html,
     }
 
     .btn_make-a-friend {
-        margin-left: 0px;  
+        margin-left: 0px;
     }
 
     .start-screen__img-puppy {
@@ -976,7 +998,7 @@ html,
         text-align: center;
     }
 
-    .about__text .subtitle  {
+    .about__text .subtitle {
         padding: 0 5px;
         text-align: justify;
     }
@@ -992,7 +1014,7 @@ html,
         padding: 42px 0 42px;
     }
 
-    .pets__title  {
+    .pets__title {
         font-size: 25px;
     }
 
@@ -1083,13 +1105,13 @@ html,
     /* Donation */
 
     .donation__content {
-        padding: 42px 0;        
+        padding: 42px 0;
         gap: 45px;
     }
 
     .donation__text {
-        gap: 23px;       
-        align-items: center;      
+        gap: 23px;
+        align-items: center;
     }
 
     .donation__content .title {
@@ -1111,7 +1133,7 @@ html,
         text-align: justify;
     }
 
-   .donation__img-dog {
+    .donation__img-dog {
         width: 260px;
         height: 135.2px;
     }

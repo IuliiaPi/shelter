@@ -84,12 +84,16 @@ html,
 
 .link {
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .link:hover,
 .link:focus {
     opacity: .75;
+}
+
+.link:active {
+    opacity: 1;
 }
 
 /*  -------------------------  Header styles start -------------------------------  */
@@ -184,7 +188,7 @@ html,
 
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
     gap: 60px;
 }
@@ -201,7 +205,7 @@ html,
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
     row-gap: 30px;
     column-gap: 40px;
@@ -263,6 +267,10 @@ html,
     background-color: transparent;
 }
 
+.btn_learn-more:active { 
+    opacity: 0.8;
+}
+
 .navigation {
     display: flex;
     align-items: center;
@@ -290,16 +298,19 @@ html,
     background: #FDDCC4;
 }
 
+.btn-paginator_active,
+.btn-paginator:active {
+    background: #F1CDB3;
+    border: 2px solid #F1CDB3;
+}
+
 .btn-paginator_inactive,
-.btn-paginator_inactive:hover{
+.btn-paginator_inactive:hover,
+.btn-paginator_inactive:active{
     border: 2px solid #CDCDCD;
     color: #CDCDCD;
     background-color: transparent;
     cursor: no-drop;
-}
-
-.btn-paginator_active {
-    background: #F1CDB3;
 }
 
 /* Main styles end */
