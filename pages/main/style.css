@@ -456,7 +456,7 @@ html,
     transition: all 0.6s ease;
 }
 
-.btn_learn-more:active { 
+.btn_learn-more:active {
     opacity: 0.8;
 }
 
@@ -575,7 +575,7 @@ html,
     background: #FDDCC4;
 }
 
-.donation__credit-card:active{
+.donation__credit-card:active {
     background: #F1CDB3;
 }
 
@@ -959,13 +959,13 @@ html,
     .start-screen__content {
         justify-content: center;
         align-items: center;
-        /* text-align: center; */
-        gap: 110px;
+        gap: 106px;
     }
 
     .start-screen__text {
         justify-content: center;
         align-items: center;
+        gap: 43.5px;
     }
 
     .start-screen__text .title {
@@ -987,7 +987,7 @@ html,
         width: 260px;
         height: 271.77px;
 
-        margin-left: 0px;
+        margin-left: 40px;
     }
 
     /* About-content */
@@ -1000,7 +1000,7 @@ html,
     }
 
     .about__text {
-        gap: 22px;
+        gap: 23px;
     }
 
     .about__text .title {
@@ -1021,16 +1021,17 @@ html,
     /* Pets */
 
     .pets__content {
-        padding: 42px 0 42px;
+        padding: 43px 0 42px;
+        gap: 40px;
     }
 
     .pets__title {
-        font-size: 25px;
+        font-size: 24.5px;
     }
 
     .pets__slider {
         width: 270px;
-        margin-bottom: 42px;
+        margin-bottom: 3px;
         justify-content: space-around;
     }
 
@@ -1066,14 +1067,17 @@ html,
         }
     }
 
+    .card {
+        gap: 32px;
+    }
+
     .item {
         gap: 0px;
     }
 
     #btn-left {
         order: 2;
-        margin-top: 20px;
-        /* margin-bottom: 42px; */
+        margin-top: 22px;
     }
 
     #carousel-wrapper {
@@ -1082,25 +1086,23 @@ html,
 
     #btn-right {
         order: 3;
-        margin-top: 20px;
+        margin-top: 22px;
     }
 
     /* Help */
 
     .help__content {
-        /* max-width: 270px; */
         padding: 42px 0 12px;
+        gap: 40px;
     }
 
     .help__content .title {
-        max-width: 220px;
-        margin-bottom: 42px;
+        max-width: 240px;
         font-size: 25px;
     }
 
     .help__list {
-        /* row-gap: 10px; */
-        /* justify-content: space-between; */
+        justify-content: space-between;
     }
 
     .help__item {
@@ -1116,11 +1118,11 @@ html,
 
     .donation__content {
         padding: 42px 0;
-        gap: 45px;
+        gap: 40px;
     }
 
     .donation__text {
-        gap: 23px;
+        gap: 24px;
         align-items: center;
     }
 
@@ -1136,6 +1138,8 @@ html,
     }
 
     .donation__credit-card {
+        width: 280px;
+
         font-size: 15px;
     }
 
@@ -1163,7 +1167,7 @@ html,
 
     .footer__content {
         justify-content: center;
-        gap: 24px;
+        gap: 25px;
     }
 
     .footer__contacts,
@@ -1174,16 +1178,20 @@ html,
     }
 
     .footer__locations {
+        align-items: flex-start;
         gap: 40px;
     }
 
     .footer__contacts .title,
     .footer__locations .title {
         font-size: 25px;
+        text-align: center;
     }
 
-    .link_Boston {
+    .link_Boston,
+    .link_London {
         font-size: 18.8px;
+        text-align: left;
     }
 
     .footer__img-puppy {
