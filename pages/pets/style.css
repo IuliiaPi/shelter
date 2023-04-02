@@ -389,3 +389,248 @@ html,
 }
 
 /* Footer styles end */
+
+/*  ==============================================================================  */
+/*  ===========================  Media styles start  =============================  */
+/*  ==============================================================================  */
+
+/* -----------  @media screen and (max-width: 768px)  -------------- */
+
+@media screen and (max-width: 1220px) {
+
+    /* @media screen and (max-width: 1279.98px)  */
+
+    .container {
+        max-width: 748px;
+        /* 708px + 20px + 20px */
+        margin: 0 auto;
+    }
+
+    .header__content {
+        /* margin-bottom: 60px; */
+    }
+
+    /* Main */
+
+    .main__content {
+        padding-bottom: 75px;
+        gap: 30px;
+    }
+
+    .cards-container {
+        height: 1374px;
+        overflow: hidden;
+    }
+
+    /* Footer */
+
+    .footer__content {
+        padding: 30px 0px 0px;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .footer__contacts,
+    .footer__locations {
+        padding: 0px 0px 15px;
+    }
+
+}
+
+/* ============================================================================= */
+/* -----------  @media screen and (max-width: 320px)  ---------------- */
+/* @media (max-width: 767px) */
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        max-width: 340px;
+        /* 300px + 20px + 20px */
+
+        margin: 0 auto;
+    }
+
+    .menu__icon {
+        width: 30px;
+        height: 22px;
+
+        z-index: 5;
+
+        display: block;
+
+        position: relative;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        width: 100%;
+        height: 2px;
+
+        position: absolute;
+        left: 0;
+
+        transition: all 0.3s ease 0s;
+        background-color: #000000;
+    }
+
+    /* .menu__icon span, */
+    .menu__icon::before,
+    .menu__icon::after {
+        content: "";
+    }
+
+    .menu__icon::before {
+        top: 0;
+    }
+
+    .menu__icon span {
+        top: 50%;
+        transform: translateY(-50%);
+        /* strogo po centerv */
+        /* transform: scale(1) translate(0px, -50%); */
+    }
+
+    .menu__icon::after {
+        bottom: 0;
+    }
+
+    .menu__icon._active {
+        transform: rotate(90deg);
+
+        /* transform: scale(0) translate(0px, -50%); */
+    }
+
+    .menu__icon._active span {
+        /* transform: scale(0) translate(0px, -50%); */
+    }
+
+    .menu__icon._active::before {
+        /* top: 50%; */
+        /* left: 0; */
+        /* transform: rotate(90deg); */
+        /* transform: rotate(90deg) translate(0px, -50%); */
+    }
+
+    .menu__icon._active::after {
+        /* right: 0; */
+        /* transform: rotate(90deg); */
+        /* transform: rotate(90deg) translate(0px, 50%); */
+    }
+
+    .menu__body {
+        width: 320px;
+        height: 100%;
+        padding-top: 250px;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+
+        background: #292929;
+
+        transition: right 0.3s ease 0s;
+        overflow: auto;
+        /* scroll menu  */
+    }
+
+    .menu__body._active {
+        right: 0;
+    }
+
+    /* .menu__body::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 90px;
+        background-color: var(--bg-main-color);
+        z-index: 2;
+    } */
+
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .menu__link {
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 160%;
+
+        color: #CDCDCD;
+    }
+
+    /* ---------------------------- */
+
+    /* Header styles end */
+
+    /* Main styles start */
+
+    .main__content {
+        padding: 43px 0 42px;
+
+        gap: 41px;
+    }
+
+    .title {
+        font-size: 24.5px;
+    }
+
+    .cards-container {
+        height: 1366px;
+        overflow: hidden;
+    }
+
+    .navigation {
+        gap: 10px;
+    }
+
+    /* Main styles end */
+
+    /* Footer styles start */
+
+    .footer__content {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .footer__contacts,
+    .footer__locations {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__locations {
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .footer__contacts .title,
+    .footer__locations .title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .link_Boston,
+    .link_London {
+        font-size: 18.8px;
+        text-align: left;
+    }
+
+    .footer__img-puppy {
+        width: 260px;
+        height: 269px;
+    }
+
+}
+
+/* ----------------------  Media styles end -------------------------- */
