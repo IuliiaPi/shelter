@@ -497,6 +497,10 @@ html,
         bottom: 0;
     }
 
+    .menu__icon:hover {
+        opacity: 0.5;
+    }
+
     .menu__icon._active {
         transform: rotate(90deg);
 
@@ -529,7 +533,7 @@ html,
         top: 0;
         right: -100%;
 
-        background: #292929;
+        background: #FFFFFF;
 
         transition: right 0.3s ease 0s;
         overflow: auto;
@@ -552,20 +556,20 @@ html,
     } */
 
     .menu__list {
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         align-items: center;
         gap: 40px;
     }
 
     .menu__link {
-        font-family: 'Arial';
+        /* font-family: 'Arial';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 400; */
         font-size: 32px;
         line-height: 160%;
 
-        color: #CDCDCD;
+        /* color: #545454; */
     }
 
     /* ---------------------------- */

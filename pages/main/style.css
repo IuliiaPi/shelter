@@ -594,26 +594,175 @@ html,
 /* ----------------------  Donation styles end -------------------------- */
 
 
-/* ------------------- popup ------------------ */
+/* ------------------- popup pets ------------------ */
 
 .popup_hidden {
-    display: none;
+    /* display: none; */
 }
 
 .popup {
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 41, 41, 0.6);
+
+    display: none;
+    /* opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s ease; */
+}
+
+.popup._active {
+    display: block;
+    /* opacity: 1; */
+}
+
+.popup__container {
+    /* width: 682px;
+    height: 402px; */
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: 15;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.popup__btn {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    /* left: 621px; */
+    left: 890px;
+    top: -50px;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+
+    color: #292929;
+    background-color: transparent;
+
+    transition: all 0.6s ease;
+}
+
+.popup__btn:hover {
+    border: 2px solid #FDDCC4;
+    background: #FDDCC4;
+}
+
+.popup__btn:active {
+    border: 2px solid #F1CDB3;
+    background: #F1CDB3;
+}
+
+.popup__content {
     width: 900px;
     height: 500px;
+
+    position: relative;
+
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    gap: 30px;
+
+    background: #FAFAFA;
     border-radius: 9px;
-    background-color: #FAFAFA;
-    opacity: 0;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup__content:hover {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.popup__img {
+    /* width: 500px; */
+    /* height: 500px; */
+    /* background-color: #211F20; */
+    /* background-image: url(../../assets/images/pets-jennifer.png); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+
+    border-radius: 9px 0px 0px 9px;
+}
+
+.popup__text {
+    padding: 50px 20px 0 0;
+}
+
+.popup__name {
+    margin-bottom: 10px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.popup__type-breed {
+    margin-bottom: 40px;
+
+    display: flex;
+    gap: 5px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+
+}
+
+.popup__description {
+    margin-bottom: 40px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.popup__list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.popup__item {
+    display: flex;
+    gap: 7px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.popup__age {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 105%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
 }
 
 /* Footer styles start */
@@ -881,6 +1030,10 @@ html,
         bottom: 0;
     }
 
+    .menu__icon:hover {
+        opacity: 0.7;
+    }
+
     .menu__icon._active {
         transform: rotate(90deg);
 
@@ -1092,7 +1245,7 @@ html,
     /* Help */
 
     .help__content {
-        padding: 42px 0 12px;
+        padding: 42px 0px;
         gap: 40px;
     }
 
@@ -1102,16 +1255,23 @@ html,
     }
 
     .help__list {
-        justify-content: space-between;
+        justify-content: center;
+        row-gap: 30px;
+        /* column-gap: 60px; */
     }
 
-    .help__item {
-        /* width: 130px; */
+    .help__list:last-child {
+        /* justify-content: space-between; */
     }
 
     .help__link {
-        gap: 10px;
+        gap: 20px;
         font-size: 15px;
+    }
+
+    .help__img {
+        width: 50px;
+        height: 50px;
     }
 
     /* Donation */
