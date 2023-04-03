@@ -80,10 +80,14 @@
 
                         <div class="start-screen__img">
                             <picture>
-                                <source srcset="../../assets/images/start-screen-puppy.png" type="image/png" media="(min-width:1220px)" width="698" height="728">
-                                <source srcset="../../assets/images/start-screen-puppy.png" type="image/png" media="(max-width:1220px)" width="569" height="593">
-                                <source srcset="../../assets/images/start-screen-puppy.png" type="image/png" media="(max-width:767px)" width="260" height="272">
-                                <img class="start-screen__img-puppy" src="../../assets/images/start-screen-puppy.png" alt="puppy" width="698" height="728">
+                                <source srcset="../../assets/images/start-screen-puppy.png" type="image/png"
+                                    media="(min-width:1220px)" width="698" height="728">
+                                <source srcset="../../assets/images/start-screen-puppy.png" type="image/png"
+                                    media="(max-width:1220px)" width="569" height="593">
+                                <source srcset="../../assets/images/start-screen-puppy.png" type="image/png"
+                                    media="(max-width:767px)" width="260" height="272">
+                                <img class="start-screen__img-puppy" src="../../assets/images/start-screen-puppy.png"
+                                    alt="puppy" width="698" height="728">
                             </picture>
                         </div>
 
@@ -253,39 +257,39 @@
                         <ul class="help__list">
                             <li class="help__item"><a href="#help" class="link help__link"><img
                                         src="../../assets/icons/icon-pet-food.svg" alt="icon-pet-food" width="60"
-                                        height="60">Pet food</a></li>
+                                        height="60" class="help__img">Pet food</a></li>
 
                             <li class="help__item"><a href="#help" class="link help__link"><img
                                         src="../../assets/icons/icon-transportation.svg" alt="icon-transportation"
-                                        width="60" height="60">Transportation</a></li>
+                                        width="60" height="60" class="help__img">Transportation</a></li>
 
                             <li class="help__item"><a href="#help" class="link help__link"><img
-                                        src="../../assets/icons/icon-toys.svg" alt="icon-toys" width="60"
-                                        height="60">Toys</a></li>
+                                        src="../../assets/icons/icon-toys.svg" alt="icon-toys" width="60" height="60"
+                                        class="help__img">Toys</a></li>
 
                             <li class="help__item"><a href="#help" class="link help__link"><img
                                         src="../../assets/icons/icon-bowls-and-cups.svg" alt="icon-bowls-and-cups"
-                                        width="60" height="60">Bowls and cups</a></li>
+                                        width="60" height="60" class="help__img">Bowls and cups</a></li>
 
                             <li class="help__item"><a href="#help" class="link help__link"><img
                                         src="../../assets/icons/icon-shampoos.svg" alt="icon-shampoos" width="60"
-                                        height="60">Shampoos</a></li>
+                                        height="60" class="help__img">Shampoos</a></li>
 
                             <li class="help__item"><a href="#help" class="link help__link"><img
                                         src="../../assets/icons/icon-vitamins.svg" alt="icon-vitamins" width="60"
-                                        height="60">Vitamins</a></li>
+                                        height="60" class="help__img">Vitamins</a></li>
 
                             <li class="help__item"><a href="#help" class="link help__link"><img
                                         src="../../assets/icons/icon-medicines.svg" alt="icon-medicines" width="60"
-                                        height="60">Medicines</a></li>
+                                        height="60" class="help__img">Medicines</a></li>
 
                             <li class="help__item"><a href="#help" class="link help__link"><img
                                         src="../../assets/icons/icon-collars-leashes.svg" alt="icon-collars-leashes"
-                                        width="60" height="60">Collars / leashes</a></li>
+                                        width="60" height="60" class="help__img">Collars / leashes</a></li>
 
                             <li class="help__item"><a href="#help" class="link help__link"><img
                                         src="../../assets/icons/icon-sleeping-area.svg" alt="icon-sleeping-area"
-                                        width="60" height="60">Sleeping areas</a></li>
+                                        width="60" height="60" class="help__img">Sleeping areas</a></li>
                         </ul>
                     </div>
                 </div>
@@ -298,7 +302,8 @@
                     <div class="donation__content">
 
                         <div class="donation__img">
-                            <img src="../../assets/images/donation-dog.png" class="donation__img-dog" alt="donation-dog" width="505" height="261">
+                            <img src="../../assets/images/donation-dog.png" class="donation__img-dog" alt="donation-dog"
+                                width="505" height="261">
                         </div>
 
                         <div class="donation__text">
@@ -317,17 +322,37 @@
                 </div>
             </section>
 
-            <!-- popup  -->
+            <!-- popup pets -->
 
-            <!-- <div class="popup popup_hidden">
-                <div class="popup_wrapper">
-                    <img>
-                    <div class="popup_content">
-                        <h3 class="popup_name"> Jennifer </h3>
+            <div class="popup pets__popup">
+                <div class="popup__container">
+
+                    <div class="popup__content">
+                        <button class="btn popup__btn">x</button>
+                        <img src="../../assets/images/pets-jennifer.png" alt="pet" class="popup__img">
+                        <!-- <div class="popup__img"></div> -->
+                        <div class="popup__text">
+                            <h3 class="popup__name"> Jennifer </h3>
+                            <div class="popup__type-breed">
+                                <h4 class="popup__type">Dog</h4>
+                                <p>-</p>
+                                <h4 class="popup__breed">Labrador</h4>
+                            </div>
+                            <p class="popup__description">Jennifer is a sweet 2 months old Labrador that is patiently
+                                waiting to find a new forever home. This girl really enjoys being able to go outside to
+                                run and play, but won't hesitate to play up a storm in the house if she has all of her
+                                favorite toys.</p>
+                            <ul class="popup__list">
+                                <li class="popup__item">Age:<span class="popup__age">2 months</span></li>
+                                <li class="popup__item">Inoculations:<span class="popup__inoculations"></span></li>
+                                <li class="popup__item">Diseases:<span class="popup__diseases"></span></li>
+                                <li class="popup__item">Parasites:<span class="popup__parasites"></span></li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
-                <button></button>
-            </div> -->
+            </div>
 
         </main>
 
@@ -359,7 +384,8 @@
                     </div>
 
                     <div class="footer__img">
-                        <img src="../../assets/images/footer-puppy.png" class="footer__img-puppy" alt="puppy" width="300" height="310">
+                        <img src="../../assets/images/footer-puppy.png" class="footer__img-puppy" alt="puppy"
+                            width="300" height="310">
                     </div>
 
                 </div>
