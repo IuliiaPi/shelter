@@ -70,6 +70,20 @@ html,
     overflow: hidden;
 }
 
+.shadow {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.shadow_active {
+    z-index: 250;
+    /* background: rgba(0, 0, 0, .5); */
+    background: rgba(41, 41, 41, 0.6);
+}
+
 .container {
     max-width: 1240px;
     /* 1200px + 20px + 20px */
@@ -390,6 +404,188 @@ html,
 
 /* Footer styles end */
 
+/* ------------------- popup pets ------------------ */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+    /* opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s ease; */
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 41, 0.6);
+}
+
+.popup._active {
+    display: block;
+    /* opacity: 1; */
+}
+
+.popup__container {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(41, 41, 41, 0.6); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* position: fixed;
+    top: 50%;
+    left: 50%; 
+    z-index: 15;
+    -webkit-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%); */
+}
+
+.popup__btn {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+
+    left: 890px;
+    top: -50px;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+
+    color: #292929;
+    background-color: transparent;
+
+    transition: all 0.6s ease;
+}
+
+.popup__btn:hover {
+    border: 2px solid #FDDCC4;
+    background: #FDDCC4;
+}
+
+.popup__btn:active {
+    border: 2px solid #F1CDB3;
+    background: #F1CDB3;
+}
+
+.popup__content {
+    width: 900px;
+    height: 500px;
+
+    position: relative;
+
+    display: flex;
+    gap: 30px;
+
+    background: #FAFAFA;
+    border-radius: 9px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup__content:hover {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.popup__img {
+    /* width: 500px; */
+    /* height: 500px; */
+    /* background-color: #211F20; */
+    /* background-image: url(../../assets/images/pets-jennifer.png); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+
+    border-radius: 9px 0px 0px 9px;
+}
+
+.popup__text {
+    padding: 50px 20px 0 0;
+}
+
+.popup__name {
+    margin-bottom: 10px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.popup__type-breed {
+    margin-bottom: 40px;
+
+    display: flex;
+    gap: 5px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.popup__description {
+    margin-bottom: 40px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.popup__list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.popup__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 10px;
+    background: #F1CDB3;
+}
+
+.popup__item-info {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 105%;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
 /*  ==============================================================================  */
 /*  ===========================  Media styles start  =============================  */
 /*  ==============================================================================  */
@@ -435,6 +631,44 @@ html,
         padding: 0px 0px 15px;
     }
 
+    /* popup */
+
+    .popup__btn {
+        left: 621px;
+    }
+
+    .popup__content {
+        width: 630px;
+        height: 350px;
+        gap: 11px;
+    }
+
+    .popup__img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .popup__text {
+        padding: 10px 9px 0 0;
+    }
+
+    .popup__type-breed {
+        margin-bottom: 20px;
+    }
+
+    .popup__description {
+        margin-bottom: 20px;
+
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+
+        color: #000000;
+    }
+
 }
 
 /* ============================================================================= */
@@ -454,7 +688,7 @@ html,
         width: 30px;
         height: 22px;
 
-        z-index: 5;
+        z-index: 999;
 
         display: block;
 
@@ -532,6 +766,7 @@ html,
         position: fixed;
         top: 0;
         right: -100%;
+        z-index: 998;
 
         background: #FFFFFF;
 
@@ -633,6 +868,43 @@ html,
     .footer__img-puppy {
         width: 260px;
         height: 269px;
+    }
+
+    /* popup */
+
+    .popup__btn {
+        left: 231px;
+    }
+
+    .popup__content {
+        width: 240px;
+        height: 341px;
+    }
+
+    .popup__img {
+        display: none;
+    }
+
+    .popup__text {
+        padding: 10px;
+    }
+
+    .popup__name {
+        text-align: center;
+    }
+
+    .popup__type-breed {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup__description {
+        margin-bottom: 24px;
+        text-align: justify;
+    }
+
+    .popup__list {
+        gap: 6px;
     }
 
 }

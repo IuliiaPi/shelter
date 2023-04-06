@@ -22,6 +22,8 @@
 <body class="page">
     <div class="page__inner">
 
+        <div class="shadow"></div>
+
         <!-- header -->
 
         <header class="header page__header">
@@ -29,7 +31,8 @@
                 <div class="header__content">
 
                     <div class="header__logo logo">
-                        <h1 class="logo__title"> <a href="../main/index.html" class="logo__link link"> Cozy House </a> </h1>
+                        <h1 class="logo__title"> <a href="../main/index.html" class="logo__link link"> Cozy House </a>
+                        </h1>
                         <p class="logo__subtitle">Shelter for pets in Boston</p>
                     </div>
 
@@ -47,7 +50,8 @@
                                 <li class="menu__item"><a href="#" class="menu__link menu__link_active">Our
                                         pets</a>
                                 </li>
-                                <li class="menu__item"><a href="../main/index.html#help" class="menu__link link">Help the shelter</a>
+                                <li class="menu__item"><a href="../main/index.html#help" class="menu__link link">Help
+                                        the shelter</a>
                                 </li>
                                 <li class="menu__item"><a href="#footer" class="menu__link link">Contacts</a></li>
                             </ul>
@@ -132,12 +136,14 @@
 
                     </div>
 
-                   <!-- navigation  -->
+                    <!-- navigation  -->
 
                     <nav class="navigation">
-                        <button disabled type="button" class="btn btn-paginator btn-paginator_inactive">&lt;&lt;</button>
+                        <button disabled type="button"
+                            class="btn btn-paginator btn-paginator_inactive">&lt;&lt;</button>
                         <button disabled type="button" class="btn btn-paginator btn-paginator_inactive">&lt;</button>
-                        <button type="button" class="btn btn-paginator btn-paginator_active" id="button_paginator_active_1">1</button>
+                        <button type="button" class="btn btn-paginator btn-paginator_active"
+                            id="button_paginator_active_1">1</button>
                         <button type="button" class="btn btn-paginator">&gt;</button>
                         <button type="button" class="btn btn-paginator">&gt;&gt;</button>
                     </nav>
@@ -174,12 +180,48 @@
                     </div>
 
                     <div class="footer__img">
-                        <img src="../../assets/images/footer-puppy.png" alt="puppy" width="300" height="310" class="footer__img-puppy">
+                        <img src="../../assets/images/footer-puppy.png" alt="puppy" width="300" height="310"
+                            class="footer__img-puppy">
                     </div>
 
                 </div>
             </div>
         </footer>
+
+        <!-- popup pets -->
+
+        <div class="popup pets__popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <button class="btn popup__btn">x</button>
+                    <img src="../../assets/images/pets-jennifer.png" alt="pet" class="popup__img">
+
+                    <div class="popup__text">
+                        <h3 class="popup__name">Jennifer</h3>
+                        <div class="popup__type-breed">
+                            <h4 class="popup__type">Dog</h4>
+                            <p>-</p>
+                            <h4 class="popup__breed">Labrador</h4>
+                        </div>
+                        <p class="popup__description">Jennifer is a sweet 2 months old Labrador that is patiently
+                            waiting to find a new forever home. This girl really enjoys being able to go outside to
+                            run and play, but won't hesitate to play up a storm in the house if she has all of her
+                            favorite toys.</p>
+                        <ul class="popup__list">
+                            <li class="popup__item"><span class="dot"></span>Age:<span
+                                    class="popup__item-info popup__age">2 months</span></li>
+                            <li class="popup__item"><span class="dot"></span>Inoculations:<span
+                                    class="popup__item-info popup__inoculations">none</span></li>
+                            <li class="popup__item"><span class="dot"></span>Diseases:<span
+                                    class="popup__item-info popup__diseases">none</span></li>
+                            <li class="popup__item"><span class="dot"></span>Parasites:<span
+                                    class="popup__item-info popup__parasites">none</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
     </div>
 </body>

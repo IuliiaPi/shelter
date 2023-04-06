@@ -2,11 +2,14 @@
 
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
+const shadow = document.querySelector('.shadow');
+
 if (iconMenu) {
     iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
+        shadow.classList.toggle("shadow_active");
     });
 }
 
@@ -17,14 +20,14 @@ if (menuLinks.length > 0) {
     });
 }
 
-const headerLogo = document.querySelector('.header__logo');
-headerLogo.addEventListener("click", onMenuLinkClick);
+shadow.addEventListener("click", onMenuLinkClick);
 
 function onMenuLinkClick(e) {
     if (iconMenu.classList.contains('_active')) {
         document.body.classList.remove('_lock');
         iconMenu.classList.remove('_active');
         menuBody.classList.remove('_active');
+        shadow.classList.toggle("shadow_active");
     }
 }
 
@@ -40,6 +43,8 @@ document.addEventListener('click', (e) => {
 const cards = document.querySelectorAll('.card');
 const petsPopup = document.querySelector('.popup');
 const popupBtn = document.querySelector('.popup__btn');
+const petsPopupContainer = document.querySelector('.popup__container');
+const petsPopupContent = document.querySelector('.popup__content');
 
 if (cards) {
     cards.forEach(card => {
@@ -53,6 +58,62 @@ function onCardClick(e) {
     }
 
 popupBtn.addEventListener("click", closePopup);
+
+// petsPopupContent.addEventListener('click', (e) => {
+//     document.body.classList.toggle('_lock');
+//     petsPopup.classList.add('_active');
+// });
+
+// document.addEventListener('click', (e) => {
+//     const click = e.composedPath().includes(petsPopupContent);
+    // if (!click) {
+        // document.body.classList.toggle('_lock');
+        // petsPopupContent.classList.add('_active');
+        // petsPopup.classList.add('_active');
+        // petsPopup.addEventListener("click", closePopup);
+    // }
+// });
+
+
+// const petsPopupContentID = document.querySelector('#popup__content');
+
+// document.addEventListener('click', (e) => {
+// if(e.target.closers('.popup__content')) return
+// // petsPopup.classList.remove('_active');
+// petsPopupContent.classList.remove('_active');
+// });
+
+
+
+
+
+
+// const petsPopupContentID = document.querySelector('#popup__content');
+
+// document.addEventListener('click', (e) => {
+// if(e.target.id !== 'popup__content'){
+// petsPopup.classList.remove('_active');}
+// });
+
+
+
+
+// const popupQuerySelector = "#popup";
+// const popupEl = document.querySelector(popupQuerySelector);
+// document.addEventListener("click", (e) => {
+//     // Check if the filter list parent element exist
+//     const isClosest = e.target.closest(popupQuerySelector);
+  
+//     // If `isClosest` equals falsy & popup has the class `show`
+//     // then hide the popup
+//     if (!isClosest && popupEl.classList.contains("_active")) {
+//       popupEl.classList.remove("_active");
+//     }
+//   });
+
+
+
+
 
 function closePopup(e) {
     if (petsPopup.classList.contains('_active')) {
