@@ -426,6 +426,21 @@ html,
     /* opacity: 1; */
 }
 
+@keyframes display {
+    from {
+       opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.display-popup {
+    animation-name: display;
+    animation-duration: 1s;
+}
+
 .popup__container {
     width: 100%;
     height: 100%;

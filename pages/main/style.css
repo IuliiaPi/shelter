@@ -624,12 +624,45 @@ html,
     width: 100%;
     height: 100%;
     background-color: rgba(41, 41, 41, 0.6);
+
+    /* transition: all 4.9s ease; */
 }
 
 .popup._active {
     display: block;
     /* opacity: 1; */
+    /* transition: all 4.9s ease; */
 }
+
+@keyframes display {
+    from {
+       opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.display-popup {
+    animation-name: display;
+    animation-duration: 1s;
+}
+
+/* @keyframes display-close {
+    from {
+       opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.display-popup-close {
+    animation-name: display-close;
+    animation-duration: 3s;
+} */
 
 .popup__container {
     width: 100%;

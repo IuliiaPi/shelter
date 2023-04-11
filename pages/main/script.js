@@ -7,6 +7,7 @@ const shadow = document.querySelector('.shadow');
 if (iconMenu) {
     iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle('_lock');
+
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
         shadow.classList.toggle("shadow_active");
@@ -46,6 +47,33 @@ const popupBtn = document.querySelector('.popup__btn');
 const petsPopupContainer = document.querySelector('.popup__container');
 const petsPopupContent = document.querySelector('.popup__content');
 
+const popupImg = document.querySelector('.popup__img');
+const popupName = document.querySelector('.popup__name');
+const popupType = document.querySelector('.popup__type');
+const popupBreed = document.querySelector('.popup__breed');
+const popupDescription = document.querySelector('.popup__description');
+// popupName.textContent = "Jennifer";
+
+async function getCard() {
+    let pets = 'pets.json';
+    const res = await fetch(pets);
+    const data = await res.json();
+    // console.log(data);
+    
+    popupImg.textContent = `${data.img}`;
+    popupName.textContent = `${data.name}`;
+    popupType.textContent = `${data.type}`;
+    popupBreed.textContent = `${data.breed}`;
+    popupDescription.textContent = `${data.description}`;
+}
+// getCard();
+
+// if (cards) {
+//     cards.forEach(card => {
+//         card.addEventListener("click", getCard);
+//     });
+// }
+
 if (cards) {
     cards.forEach(card => {
         card.addEventListener("click", onCardClick);
@@ -53,11 +81,19 @@ if (cards) {
 }
 
 function onCardClick(e) {
-        document.body.classList.toggle('_lock');
-        petsPopup.classList.add('_active');
-    }
+    document.body.classList.toggle('_lock');
+    petsPopup.classList.add('_active', 'display-popup');
+
+}
 
 popupBtn.addEventListener("click", closePopup);
+
+petsPopup.addEventListener('click', function (event) {
+    const isOutSide = !event.target.closest('.popup__content');
+    if (isOutSide) {
+        closePopup();
+    }
+});
 
 // petsPopupContent.addEventListener('click', (e) => {
 //     document.body.classList.toggle('_lock');
@@ -66,12 +102,12 @@ popupBtn.addEventListener("click", closePopup);
 
 // document.addEventListener('click', (e) => {
 //     const click = e.composedPath().includes(petsPopupContent);
-    // if (!click) {
-        // document.body.classList.toggle('_lock');
-        // petsPopupContent.classList.add('_active');
-        // petsPopup.classList.add('_active');
-        // petsPopup.addEventListener("click", closePopup);
-    // }
+// if (!click) {
+// document.body.classList.toggle('_lock');
+// petsPopupContent.classList.add('_active');
+// petsPopup.classList.add('_active');
+// petsPopup.addEventListener("click", closePopup);
+// }
 // });
 
 
@@ -84,10 +120,6 @@ popupBtn.addEventListener("click", closePopup);
 // });
 
 
-
-
-
-
 // const petsPopupContentID = document.querySelector('#popup__content');
 
 // document.addEventListener('click', (e) => {
@@ -96,14 +128,12 @@ popupBtn.addEventListener("click", closePopup);
 // });
 
 
-
-
 // const popupQuerySelector = "#popup";
 // const popupEl = document.querySelector(popupQuerySelector);
 // document.addEventListener("click", (e) => {
 //     // Check if the filter list parent element exist
 //     const isClosest = e.target.closest(popupQuerySelector);
-  
+
 //     // If `isClosest` equals falsy & popup has the class `show`
 //     // then hide the popup
 //     if (!isClosest && popupEl.classList.contains("_active")) {
@@ -111,16 +141,16 @@ popupBtn.addEventListener("click", closePopup);
 //     }
 //   });
 
-
-
-
-
 function closePopup(e) {
     if (petsPopup.classList.contains('_active')) {
         document.body.classList.remove('_lock');
         petsPopup.classList.remove('_active');
+        // petsPopup.classList.add('display-popup-close');
     }
 }
+
+
+
 
 // carousel
 

@@ -43,6 +43,7 @@ document.addEventListener('click', (e) => {
 const cards = document.querySelectorAll('.card');
 const petsPopup = document.querySelector('.popup');
 const popupBtn = document.querySelector('.popup__btn');
+const petsPopupContent = document.querySelector('.popup__content');
 
 if (cards) {
     cards.forEach(card => {
@@ -51,11 +52,18 @@ if (cards) {
 }
 
 function onCardClick(e) {
-        document.body.classList.toggle('_lock');
-        petsPopup.classList.add('_active');
-    }
+    document.body.classList.toggle('_lock');
+    petsPopup.classList.add('_active', 'display-popup');
+}
 
 popupBtn.addEventListener("click", closePopup);
+
+petsPopup.addEventListener('click', function (event) {
+    const isOutSide = !event.target.closest('.popup__content');
+    if (isOutSide) {
+        closePopup();
+    }
+});
 
 function closePopup(e) {
     if (petsPopup.classList.contains('_active')) {
